@@ -4,24 +4,34 @@ const mysql = require (`mysql2`);
 const hbs = require (`hbs`);//motor de plantilla
 const path = require (`path`);//enrutador de archivos
 const nodemailer = require (`nodemailer`);//enviar mails
+const { application } = require("express");
 require(`dotenv`).config();//variables de entorno
 
 //configurmos el puerto
 const PORT = process.env.PORT || 9000;
 
 
-//Midelwers Funciones que configuran el backend
+//Middelwers Funciones que configuran el backend
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname,`public`)));
 
+
+
 //Configuramos el motor de plantillas de HBS 
 
 app.set(`view engine`,`hbs`);
+
 //configuramos la ubicacion de las plantillas 
+
 app.set(`views`, path.join(__dirname,`views`));
+
 //configuramos los parciales de los motores de plantillas
-hbs.registerPartials(path.join(__dirname,`views/partials`)); 
+
+hbs.registerPartials(path.join(__dirname,`views/parcials`)); 
+
+
+
 
 //crear base de datoy y despues se comenta
 
@@ -46,16 +56,46 @@ conexion.connect((err) =>{
 
 
 //rutas de la aplicacion
-app.get(`/`, (req, res)=> {
-    res.send(`bienvenido a la app completa`)
-
+app.get('/', (req, res) => {
+    res.render('index', {
+        titulo: 'Home'
+    })
 })
+
+app.get('/formulario', (req, res) => {
+    res.render('formulario', {
+        titulo: 'Formulario'
+    })
+})
+
+ 
+app.get('/productos', (req, res) => {
+    res.render('productos', {
+        titulo: 'Productos'
+    })
+})
+
+
+app.get('/contacto', (req, res) => {
+    res.render('contacto', {
+        titulo: 'Contacto'
+    })
+})
+
+
+
+
+
 
 
 //Servidor a la escucha de las peticiones
 app.listen(PORT,()=>{
     console.log(`servidor trabajando en el puerto : ${PORT}`);
 })
+
+
+
+
 
 
 
