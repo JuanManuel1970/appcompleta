@@ -84,18 +84,75 @@ app.get('/contacto', (req, res) => {
 
 
 
+app.post('/formulario', (req, res) =>{    
+    const nombre = req.body.nombre;
+    const precio = req.body.precio;
+    const descripcion = req.body.descripcion;
 
+    let datos = {
+        nombre: nombre,
+        precio: precio,
+        descripcion: descripcion
+    }
 
+    let sql = "INSERT INTO productos set ?";
 
-
-//Servidor a la escucha de las peticiones
-app.listen(PORT,()=>{
-    console.log(`servidor trabajando en el puerto : ${PORT}`);
+    conexion.query(sql, datos, function(err){
+        if (err) throw err;
+            console.log(`1 Registro insertado`);
+            res.render('enviado')
+        })
 })
 
+app.post('/contacto', (req, res) =>{
+    const nombre = req.body.nombre;
+    const email = req.body.email;
 
+    //Creamos una función para enviar Email al cliente
+    async function envioMail(){
+        //Configuramos la cuenta del envío
+        let transporter = nodemailer.createTransport({
+            host: 'smtp.gmail.com',
+            port: 465,
+            secure: true,
+            auth: {
+                user: process.env.EMAIL,
+                pass: process.env.EMAILPASSWORD
+            }
+        });
 
+        //Envío del mail
+        let info = await transporter.sendMail({
+            from: process.env.EMAIL,
+            to: `${email}`,
+            subject: "Gracias por suscribirte a nuestra App",
+            html:`Muchas gracias por visitar nuestra página <br>
+            Recibirás nuestras promociones a esta dirrección de correo. <br>
+            Buen fin de semana!!`
+        })
+    }
 
+    let datos = {
+        nombre: nombre,
+        email: email
+    }
+
+    let sql = "INSERT INTO contactos set ?";
+
+    conexion.query(sql, datos, function(err){
+        if (err) throw err;
+            console.log(`1 Registro insertado`);
+            //Email
+            envioMail().catch(console.error);
+            res.render('enviado')
+        })
+
+})
+
+//Servidor a la escucha de las peticiones
+app.listen(PORT, ()=>{
+    console.log(`Servidor trabajando en el Puerto: ${PORT}`);
+})
 
 
 
