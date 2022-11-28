@@ -94,7 +94,11 @@ app.post('/formulario', (req, res) =>{
 
 app.post('/contacto', (req, res) =>{
     const nombre = req.body.nombre;
+    const apellido = req.body.apellido;
+    const telefono = req.body.telefono;
     const email = req.body.email;
+    const mensaje = req.body.mensaje;
+
 
     //Creamos una función para enviar Email al cliente
     async function envioMail(){
@@ -114,15 +118,17 @@ app.post('/contacto', (req, res) =>{
             from: process.env.EMAIL,
             to: `${email}`,
             subject: "Gracias por suscribirte a nuestra App",
-            html:`Muchas gracias por visitar nuestra página <br>
-            Recibirás nuestras promociones a esta dirrección de correo. <br>
-            Buen fin de semana!!`
+            html:`Muchas gracias por visitar mi página <br>
+            Me pondre en contacto con vos , lo antes posible ...Saludos!!! <br>`
         })
     }
 
     let datos = {
         nombre: nombre,
-        email: email
+        apellido: apellido,
+        telefono: telefono,
+        email: email,
+        mensaje : mensaje
     }
 
     let sql = "INSERT INTO contactos set ?";
