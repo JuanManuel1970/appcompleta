@@ -1,3 +1,421 @@
-body {background-color: aqua;}
 
-.title{color: green;}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+  }
+  section{
+      padding: 100px 200px;
+    }
+  .main{
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: url(./imagenes/bg.jpg)no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+  }
+  .main .content{
+      max-width: 800px;
+  }
+  .main .content h2{
+      color: rgb(255, 251, 0);
+      font-size: 2em;
+      font-weight: 500;
+  }
+  .main .content h2 span{
+      font-size: 2.8em;
+      font-weight: 600;
+  }
+  .animated-text{
+      position: relative;
+      height: 70px;
+      overflow: hidden;
+    }
+    
+    .animated-text h3{
+      color: #06ec66;
+      font-size: 3em;
+      font-weight: 700;
+      line-height: 70px;
+      letter-spacing: 1px;
+    }
+    
+    .animated-text h3:nth-child(1){
+      animation: text-move 10s infinite;
+    }
+    
+    @keyframes text-move{
+      0%{
+        margin-top: 0;
+      }
+      25%{
+        margin-top: -70px;
+      }
+      50%{
+        margin-top: -140px;
+      }
+      75%{
+        margin-top: -70px;
+      }
+      100%{
+        margin-top: 0;
+      }
+    }
+  
+    .yo {background-color: rgb(255, 255, 255);
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .yo .content{
+        
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+  }
+  .yo .content .col-left{
+      position: relative;
+      width: 45%;
+  }
+  .yo .content .col-right{
+    position: relative;
+    width: 50%;
+  }
+  .yo .content .col-left .img-card{
+      position: relative;
+      width: 100%;
+      min-height: 500px;
+      
+  }
+  .yo .content .col-left .img-card img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      
+      object-fit: cover; 
+      border-radius: 10px;
+      box-shadow: 5px 5px 3px rgb(0, 0, 0);
+  }
+  
+  .yo .content .col-right .content-title{
+    font-size: 2em;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  .yo .content .col-right .paragraph-text{
+    font-size: 1em;
+  }
+  
+  yo {background-color: rgb(255, 255, 255);
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .yo .content{
+        
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+  }
+  .yo .content .col-left{
+      position: relative;
+      width: 45%;
+  }
+  .yo .content .col-right{
+    position: relative;
+    width: 50%;
+  }
+  .yo .content .col-left .img-card{
+      position: relative;
+      width: 100%;
+      min-height: 500px;
+      
+  }
+  .yo .content .col-left .img-card img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      
+      object-fit: cover; 
+      border-radius: 10px;
+      box-shadow: 5px 5px 3px rgb(0, 0, 0);
+  }
+  
+  .yo .content .col-right .content-title{
+    font-size: 2em;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  .yo .content .col-right .paragraph-text{
+    font-size: 1em;
+  }
+  
+  .yo {background-color: rgb(255, 255, 255);
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+    .yo .content{
+        
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+  }
+  .yo .content .col-left{
+      position: relative;
+      width: 45%;
+  }
+  .yo .content .col-right{
+    position: relative;
+    width: 50%;
+  }
+  .yo .content .col-left .img-card{
+      position: relative;
+      width: 100%;
+      min-height: 500px;
+      
+  }
+  .yo .content .col-left .img-card img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      
+      object-fit: cover; 
+      border-radius: 10px;
+      box-shadow: 5px 5px 3px rgb(0, 0, 0);
+  }
+  
+  .yo .content .col-right .content-title{
+    font-size: 2em;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  .yo .content .col-right .paragraph-text{
+    font-size: 1em;
+  }
+  
+  
+  
+  
+  
+  
+  
+  .habilidades {background-color: rgb(18, 67, 131);
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    justify-content: space-between;
+  }
+  .habilidades .content{
+      
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+  }
+  
+  
+  
+  .habilidades .content .col-left .img-card img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    
+    object-fit: cover; 
+    border-radius: 10px;
+    box-shadow: 5px 5px 3px rgb(0, 0, 0);
+  }
+  
+  .habilidades{
+    background: #0575b6;
+  }
+  .habilidades .content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    margin-top: 20px;
+  }
+  
+  .habilidades .content .col-left{
+    position: relative;
+    width: 90%;
+    margin-right: 50px;
+  }
+  
+  
+  
+  .habilidades .content .col-right{
+    position: relative;
+    width: 90%;
+  }
+  .habilidades .content .col-right .bar{
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  
+  .habilidades .content .col-right .bar .line{
+    position: relative;
+    width: 100%;
+    height: 15px;
+    background: rgba(3, 214, 3, 0.11);
+    border-radius: 4px;
+  }
+  .habilidades .content .col-right .bar .line:before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+  }
+  .habilidades .content .col-right .bar .html:before{
+    width: 70%;
+    background: #04ad59;
+    
+  }
+  
+  .habilidades .content .col-right .bar .css:before{
+    width: 60%;
+    background: #04ad59;
+    
+  }
+  
+  .habilidades .content .col-right .bar .javascript:before{
+    width: 35%;
+    background: #d36922;
+    
+  }
+  
+  .habilidades .content .col-right .bar .node:before{
+    width: 20%;
+    background: #d32222;
+    
+  }
+  
+  .habilidades .content .col-right .bar .mysql:before{
+    width: 20%;
+    background: #d32222;
+    
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  body{
+    min-height: 110vh;
+  }  
+  
+  
+  /*  +++++++++++++++++++++++++++footer++++++++++++++++++++++++++++++ */
+  
+  .footer{
+    background:#000016 ;
+    color: #fff;
+    text-align: center;
+    padding: 2em;
+  }
+  
+  .footer .footer-title{
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .footer p{
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .footer p a{
+    color: #3a6cf4;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  
+  
+  
+  @media (max-width: 1040px){   
+  
+      section{
+        padding: 80px 20px;
+      }
+      
+  
+  
+  }
+  
+  
+  
