@@ -1,20 +1,30 @@
+
+
+-- Database para la App Completa --
+create database empresautn;
+
+-- Selecciono la Database -- 
 use empresautn;
--- reamos la tabla producctos para la app completa --
+
+-- drop table empleados; --
+-- drop table contactos; --
+
+
+-- Creamos la tabla Productos para la App Completa --
 create table productos(
-idproducto int unsigned not null auto_increment,
+idProducto int unsigned not null auto_increment,
 nombre varchar(150) not null,
 precio int not null,
-dproductosescripcion varchar (200) not null,
-primary key (idproducto)
+descripcion varchar(200) not null,
+primary key (idProducto)
 );
 
-select * from empresautn.productos;
--- creamos la tabla contacto para la app completa --
-
-drop tables contactos;
+drop table contactos;
+-- Creamos la tabla Contacto para la App Completa --
 create table contactos(
 idContacto int unsigned not null auto_increment,
 nombre varchar(150) not null,
-email varchar(20) not null,
+email varchar(150) not null,
 primary key (idContacto)
 );
+

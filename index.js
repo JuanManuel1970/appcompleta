@@ -62,25 +62,13 @@ app.get('/', (req, res) => {
     })
 })
 
-app.get('/formulario', (req, res) => {
-    res.render('formulario', {
-        titulo: 'Formulario'
-    })
-})
-
- 
-app.get('/productos', (req, res) => {
-    res.render('productos', {
-        titulo: 'Productos'
-    })
-})
-
 
 app.get('/contacto', (req, res) => {
-    res.render('contacto', {
+    res.render('Contacto', {
         titulo: 'Contacto'
     })
 })
+
 
 
 
